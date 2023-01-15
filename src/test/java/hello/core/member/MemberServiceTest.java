@@ -4,16 +4,14 @@ import hello.core.AppConfig;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
+@SpringBootTest // @SpringBootApplication 안에는 @ComponentScan이 존재
 public class MemberServiceTest {
 
+    @Autowired
     MemberService memberService;
-
-    @BeforeEach
-    public void beforeEach() {
-        AppConfig appConfig = new AppConfig();
-        memberService = appConfig.memberService();
-    }
 
     @Test
     void join() {
