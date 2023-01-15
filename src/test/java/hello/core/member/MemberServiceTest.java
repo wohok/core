@@ -7,9 +7,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest // @SpringBootApplication 안에는 @ComponentScan이 존재
+@SpringBootTest
 public class MemberServiceTest {
 
+    @Autowired
     MemberService memberService;
 
     @Test
