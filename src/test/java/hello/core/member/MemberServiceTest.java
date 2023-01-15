@@ -10,7 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest // @SpringBootApplication 안에는 @ComponentScan이 존재
 public class MemberServiceTest {
 
-    @Autowired
     MemberService memberService;
 
     @Test
